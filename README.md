@@ -27,11 +27,17 @@ BLYNK_WRITE(V1){a=param.asInt();}
 BLYNK_WRITE(V2){b=param.asInt();}
 BLYNK_WRITE(V3){c=param.asInt();}
 BLYNK_WRITE(V4){d=param.asInt();}
+
+
+
 //Assignment of Indicators to virtual pin
 WidgetLED ST1(V20);
 WidgetLED ST2(V21);
 WidgetLED ST3(V22);
 WidgetLED ST4(V23);
+
+
+
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
 char auth[] = "jLWP2HTNC4kcQvNw037DJURV_cvWcJSl";
@@ -58,7 +64,8 @@ void loop()
   BLYNK_WRITE(V2);
   BLYNK_WRITE(V3);
   BLYNK_WRITE(V4);
-  digitalWrite(sw1,a);
+
+digitalWrite(sw1,a);
    if(a>0)
     ST1.off();
    else
